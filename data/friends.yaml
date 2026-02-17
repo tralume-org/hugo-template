@@ -1,0 +1,11 @@
+- name:
+    zh-Hans: "我的站点"
+    en-US: "My Site"
+    default: "My Site" # Optional fallback when current locale is missing.
+  description:
+    zh-Hans: "你好"
+    en-US: "Hello"
+  url: "https://example.com"
+  avatar: "https://example.com/avatar.png"
+  # Optional, used for "prefer current language" grouping and language badges.
+  language: ["zh-Hans", "en-US"]
