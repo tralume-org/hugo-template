@@ -14,10 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: forgejo.alexma.top/alexma233/ci-images:hugo-wrangler
+      options: --user 0:0
 
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Mark repo as safe for git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Download Hugo modules
         run: |
           hugo mod tidy
